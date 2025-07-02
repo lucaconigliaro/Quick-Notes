@@ -54,10 +54,10 @@ L’app permette di aggiungere, modificare ed eliminare note, con salvataggio lo
 ## 📍 Obiettivo del progetto
 
 Quick Notes è stato creato per:
-	•	Approfondire la gestione dello stato e la manipolazione del DOM in JavaScript puro
-	•	Implementare un’interfaccia utente semplice, intuitiva e responsive
-	•	Praticare il salvataggio persistente dati tramite localStorage
-	•	Sperimentare il tema scuro e la gestione dinamica dei contenuti
+  - Approfondire la gestione dello stato e la manipolazione del DOM in JavaScript puro
+  -	Implementare un’interfaccia utente semplice, intuitiva e responsive
+  -	Praticare il salvataggio persistente dati tramite localStorage
+  -	Sperimentare il tema scuro e la gestione dinamica dei contenuti
 
 ---
 
