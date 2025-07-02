@@ -1,47 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Notes</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+    <title>Quick Notes</title> <!-- Titolo della pagina -->
+    <link rel="stylesheet" href="style.css"> <!-- Collegamento al file CSS -->
+    <script src="app.js" defer></script> <!-- Collegamento al file JS -->
 </head>
 <body>
 
     <header>
-        <h1>Quick Notes</h1>
+        <h1>Quick Notes</h1> <!-- Titolo principale -->
         <div>
-            <button class="add-note-btn" onclick="openNoteDialog()">+ Add Note</button>
+            <!-- Bottone per aprire il modale per aggiungere una nuova nota -->
+            <button class="add-note-btn" onclick="openNoteDialog()" title="Aggiungi Nota">
+                <span class="add-icon">+</span>
+                <span class="add-label">Aggiungi Nota</span>
+              </button>
+            <!-- Bottone per cambiare tema chiaro/scuro -->
             <button id="themeToggleBtn" class="theme-toggle-btn">🌙</button>
         </div>
     </header>
 
+    <!-- Contenitore principale per mostrare tutte le note -->
     <main id="notesContainer" class="notes-grid">
 
     </main>
 
+    <!-- Modale per aggiungere/modificare una nota -->
     <dialog id="noteDialog">
         <div class="dialog-content">
             <div class="dialog-header">
-                <h2 class="dialog-title" id="dialogTitle">Add New Note</h2>
-                <button class="close-btn" onclick="closeNoteDialog()">x</button>
+                <!-- Titolo dinamico: Aggiungi o Modifica Nota -->
+                <h2 class="dialog-title" id="dialogTitle">Aggiungi Nuova Nota</h2>
+                <!-- Bottone per chiudere il dialogo -->
+                <button class="close-btn" onclick="closeNoteDialog()">×</button>
             </div>
 
+            <!-- Form per inserire/modificare i dati della nota -->
             <form id="noteForm">
                 <div class="form-group">
-                    <label for="noteTitle" class="form-label">Title</label>
-                    <input type="text" id="noteTitle" class="form-input" placeholder="Enter note title..." required>
+                    <label for="noteTitle" class="form-label">Titolo</label>
+                    <input type="text" id="noteTitle" class="form-input" placeholder="Inserisci il titolo della nota..." required>
                 </div>
 
                 <div class="form-group">
-                    <label for="noteContent" class="form-label">Content</label>
-                    <input id="noteContent" class="form-textarea" placeholder="Write yout note here..." required>
+                    <label for="noteContent" class="form-label">Contenuto</label>
+                    <input id="noteContent" class="form-textarea" placeholder="Scrivi qui la tua nota..." required>
                 </div>
 
                 <div class="dialog-actions">
-                    <button type="button" class="cancel-btn" onclick="closeNoteDialog()">Cancel</button>
-                    <button type="submit" class="save-btn">Save Note</button>
+                    <button type="button" class="cancel-btn" onclick="closeNoteDialog()">Annulla</button>
+                    <button type="submit" class="save-btn">Salva Nota</button>
                 </div>
             </form>
         </div>
